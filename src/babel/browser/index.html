@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<div id="output"></div>
+<!-- Load Babel -->
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<!-- Your custom script here -->3
+<script type="text/babel">
+    class Animal {
+        constructor () {
+            this.type = 'animal';
+        };
+        says (say) {
+            console.log(this.type +' says '+ say);
+        }
+    }
+
+    var animal = new Animal();
+    animal.says('hello');
+
+    const getMessage = () => "Hello animal";
+    document.getElementById('output').innerHTML = getMessage();
+</script>
+
+</body>
+</html>

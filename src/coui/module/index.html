@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0, user-scalable=0" />
+  <title></title>
+  <link rel="stylesheet" href="../public/css/font/iconfont.css" />
+  <link rel="stylesheet" href="../public/css/style.css" />
+  <link rel="stylesheet" href="../public/css/flex.css" />
+  <link rel="stylesheet" href="../public/css/base.css" />
+</head>
+<body>
+  <div id="app">
+    <co-header id="co-header" title="corMobi" fixed  class="co-bg-3 co-cl-0">
+      <!--头部左侧内容区域-->
+      <div slot="left" class="co-flex">
+      </div>
+      <!--头部右侧内容区域-->
+      <div slot="right" class="co-flex co-je">
+      </div>
+    </co-header>
+    <div id="co-content" class="co-content-top co-content-bottom">
+    </div>
+    <div id="co-footer" class="co-bg-0 co-bd-t1 co-flex co-ac co-jc co-fs-01 co-cl-2">
+      corMobi
+    </div>
+  </div>
+</body>
+<script src="../public/js/vue.js"></script>
+<script src="../public/js/index.js"></script>
+<script src="../public/js/corAPI.js"></script>
+<script>
+  //等待原生组件加载完毕后执行
+  corJS.ready(function(){
+    var top = corJS.offset("co-header").h;
+    var bottom = corJS.offset("co-footer").h;
+    var h = corJS.getHeight() - top - bottom;
+    corNative.openFloatWindow({
+      name: "co-frame",
+      url: "index_main.html",
+      x: 0,
+      y: top,
+      w:null,
+      h:h
+    });
+  })
+  var vm = new Vue({
+    el:"#app",
+    data:{
+    },
+    methods:{
+    },
+    created:function(){
+    },
+    mounted:function(){
+    }
+  })
+</script>
+</html>

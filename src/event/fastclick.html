@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<script type="application/javascript" src="fastclick.js"></script>
+<body>
+<div id="ttt">aaaaaaa</div>
+<script type="application/javascript">
+
+    FastClick.attach(document.body, {
+        tapDelay: 10
+    })
+
+    var $ttt = document.getElementById('ttt');
+    $ttt.addEventListener('click', function(e) {
+        console.log(e.target)
+    })
+
+</script>
+
+</body>
+</html>
